@@ -1,0 +1,32 @@
+# ============================================================
+# 换行符与二进制文件规则
+# 配合：git config core.autocrlf false
+# 原理：仓库里一律存 LF，检出时按 eol 规则转换，避免全文件 diff 抖动
+# ============================================================
+
+* text=auto
+
+# ---------- Windows 原生工程文件：必须 CRLF ----------
+*.sln              text eol=crlf
+*.vcxproj          text eol=crlf
+*.vcxproj.filters  text eol=crlf
+*.props            text eol=crlf
+*.uvprojx          text eol=crlf
+*.uvoptx           text eol=crlf
+*.bat              text eol=crlf
+*.cmd              text eol=crlf
+*.ps1              text eol=crlf
+
+# ---------- 二进制：禁止任何转换 ----------
+*.hex    binary
+*.bin    binary
+*.axf    binary
+*.lib    binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.pdf    binary
+*.xlsx   binary
+*.docx   binary

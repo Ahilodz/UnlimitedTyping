@@ -1,0 +1,84 @@
+# ============================================================
+# Unlimited Typing - 忽略规则
+# 原则：只提交"人写的源文件"，不提交"机器生成的东西"
+# ============================================================
+
+# ---------- 通用构建产物 ----------
+build/
+out/
+bin/
+obj/
+dist/
+*.exe
+*.dll
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.idb
+*.o
+*.obj
+*.a
+*.map
+*.lst
+
+# ---------- 固件产物 ----------
+*.hex
+*.bin
+*.axf
+*.elf
+*.s19
+
+# ---------- Visual Studio ----------
+.vs/
+*.user
+*.suo
+*.sdf
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+*.vcxproj.user
+Debug/
+Release/
+x64/
+x86/
+ipch/
+
+# ---------- Keil MDK ----------
+MDK-ARM/Objects/
+MDK-ARM/Listings/
+MDK-ARM/DebugConfig/
+MDK-ARM/RTE/
+*.uvguix.*
+*.uvoptx
+*.scvd
+*.dep
+JLinkLog.txt
+JLinkSettings.ini
+
+# ---------- CMake ----------
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+compile_commands.json
+
+# ---------- 证书与密钥（⚠️ 泄露 = 别人能冒你的名签恶意驱动） ----------
+*.pfx
+*.pvk
+*.key
+*.pem
+*.cer
+*.crt
+*.snk
+
+# ---------- 系统垃圾 ----------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# ---------- 个人草稿（不共享的笔记） ----------
+*.local.md
+notes/private/
+scratch/
